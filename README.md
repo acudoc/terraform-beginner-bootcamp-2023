@@ -101,3 +101,47 @@ https://en.wikipedia.org/wiki/Chmod
 We need to be careful when using the Init because it will not rerun if we restart an existing workspace.
 
 https://www.gitpod.io/docs/configure/workspaces/tasks
+
+### Working with Env Vars 
+
+#### env command
+
+List out all Environment Variables (Env Vars) using `env`
+Filter specific env vars using `env | grep AWS_`
+
+#### Setting and Unsetting Env Vars
+
+To set -> `export HELLO='world'`
+
+To unset -> `unset HELLO`
+
+To temporarily set ->
+
+```sh
+HELLO='world' ./bin/print_message
+```
+
+Within a bash script we can set with ->
+```sh
+#!/usr/bin/env bash
+
+HELLO='world'
+
+echo $HELLO
+```
+
+#### Print Vars
+
+Print with -> `echo $HELLO`
+
+#### Scoping of Env Vars
+
+Env Vars DO NOT persitst across bash terminals.
+To make a global env var it needs to be set in `.bash_profile`
+
+#### Persist Env Vars in Gitpod
+
+Use the following:
+```
+gp env HELLO='world'
+```
