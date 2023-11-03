@@ -171,5 +171,58 @@ If successful you will see a json formatted output:
     "Arn": "arn:aws:iam::123456789012:user/terraform-boot"
 }
 ```
+## Terraform Basics (tf)
 
-I
+### Terraform Registry
+
+Terraform sources providers and modules. Located @ [registry.terraform.io/](https://registry.terraform.io/)
+
+- **Providers** interface to APIs that allow tf to create resources.
+Example of provider;
+[Random Terraform Provider](https://registry.terraform.io/providers/hashicorp/random/latest)
+
+- **Modules** Allows large amounts of tf code modular, portable, and sharable.
+
+### Terraform Console
+
+We can see list of all tf commands, using `terraform`
+
+#### Terraform Init
+
+To start new tf project; the command `terraform init` is run to download binaries for the choosen providers 
+
+#### Terraform Plan
+
+`terraform plan`
+
+This generates a changeset; about the state of our infrastructure and what will be changed.
+
+#### Terraform Apply
+
+`terraform apply`
+
+This runs a plan and passes the changeset to be excuted by terraform. Apply should prompt yes or no.
+
+To automatically aprove an apply, use: `terraform apply --auto-aprove`
+
+### Terraform Lock Files
+
+`.terraform.lock.hcl`
+Contains the locked versioning of the providers or modules that are used in the project.
+
+**Should be committed** to version control system.
+
+
+### Terraform State Files
+
+`terraform.tfstate`
+
+Information about the current state. Can be sensitive data.
+
+**Should NOT be committed**
+
+`terraform.tfstate.backup` is the previous state file.
+
+### Terraform Directory
+
+`.terraform`
