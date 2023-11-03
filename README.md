@@ -145,3 +145,31 @@ Use the following:
 ```
 gp env HELLO='world'
 ```
+
+### AWS CLI installation
+
+This project installs via the bash script [`./bin/install_aws_cli`](./bin/install_aws_cli)
+
+[Getting Started INstall (AWS CLI)](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+[AWS CLI Env Vars(Env Vars)](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html)
+
+To check if AWS credentials are configured correctly, run following AWS CLI command:
+```sh
+aws sts get-caller-identity
+```
+
+Generate AWS CLI credentials from IAM User
+
+[AWS IAM(Access Key)](https://docs.aws.amazon.com/cli/latest/userguide/cli-services-iam-create-creds.html)
+
+If successful you will see a json formatted output:
+
+```json
+{
+    "UserId": "AEWA3NVVGYUJHBHHIKFUC",
+    "Account": "123456789012",
+    "Arn": "arn:aws:iam::123456789012:user/terraform-boot"
+}
+```
+
+I
