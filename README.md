@@ -171,6 +171,17 @@ If successful you will see a json formatted output:
     "Arn": "arn:aws:iam::123456789012:user/terraform-boot"
 }
 ```
+
+### Working with AWS resources in Terraform
+
+#### Naming S3 buckets with random
+
+[AWS S3 Naming Rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html)
+[tf docs for S3 buckets](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket)
+
+Paramenters for the random string needed to be changed.
+[hashicorp random doc](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string)
+
 ## Terraform Basics (tf)
 
 ### Terraform Registry
@@ -205,6 +216,11 @@ This runs a plan and passes the changeset to be excuted by terraform. Apply shou
 
 To automatically aprove an apply, use: `terraform apply --auto-aprove`
 
+#### Terraform Destroy
+
+This commands deletes resources from previous terraform apply.
+`terraform destroy`
+
 ### Terraform Lock Files
 
 `.terraform.lock.hcl`
@@ -226,3 +242,4 @@ Information about the current state. Can be sensitive data.
 ### Terraform Directory
 
 `.terraform`
+
