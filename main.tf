@@ -1,4 +1,12 @@
 terraform {
+  cloud {
+    organization = "AV_learning2023"
+
+    workspaces {
+      name = "terra-house-av1"
+    }
+  }
+  
   required_providers {
     random = {
       source = "hashicorp/random"
