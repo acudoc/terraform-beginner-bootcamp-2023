@@ -272,4 +272,5 @@ Open and add your tf cloud token.
 
 ```
 
-
+At 0.8.0 the above workaround was automated with the following bash script:
+[bin/generate_tfrc_credentials](bin/generate_tfrc_credentials)
