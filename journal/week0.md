@@ -1,37 +1,37 @@
 # Terraform Beginner Bootcamp 2023
 
-## Table of Content
-  * [Semantic Versioning :mage:](#semantic-versioning--mage-)
-  * [Install the Terraform CLI](#install-the-terraform-cli)
-    + [Considerations with the Terraform CLI changes](#considerations-with-the-terraform-cli-changes)
-    + [Considerations for Linux Distribution](#considerations-for-linux-distribution)
-    + [Refactoring into Bash Scripts](#refactoring-into-bash-scripts)
-      - [Shebang Considerations](#shebang-considerations)
-      - [Execution Considerations](#execution-considerations)
-      - [Linux Permissions Considerations](#linux-permissions-considerations)
-  * [Gitpod Lifecycle](#gitpod-lifecycle)
-    + [Working with Env Vars](#working-with-env-vars)
-      - [env command](#env-command)
-      - [Setting and Unsetting Env Vars](#setting-and-unsetting-env-vars)
-      - [Print Vars](#print-vars)
-      - [Scoping of Env Vars](#scoping-of-env-vars)
-      - [Persist Env Vars in Gitpod](#persist-env-vars-in-gitpod)
-    + [AWS CLI installation](#aws-cli-installation)
-    + [Working with AWS resources in Terraform](#working-with-aws-resources-in-terraform)
-      - [Naming S3 buckets with random](#naming-s3-buckets-with-random)
-  * [Terraform Basics (tf)](#terraform-basics--tf-)
-    + [Terraform Registry](#terraform-registry)
-    + [Terraform Console](#terraform-console)
-      - [Terraform Init](#terraform-init)
-      - [Terraform Plan](#terraform-plan)
-      - [Terraform Apply](#terraform-apply)
-      - [Terraform Destroy](#terraform-destroy)
-    + [Terraform Lock Files](#terraform-lock-files)
-    + [Terraform State Files](#terraform-state-files)
-    + [Terraform Directory](#terraform-directory)
-  * [Issue with Terraform Cloud Login and Gitpod Workspace](#issue-with-terraform-cloud-login-and-gitpod-workspace)
+## Table of Content :mage:
+- [Semantic Versioning](#semantic-versioning)
+- [Install the Terraform CLI](#install-the-terraform-cli)
+  * [Considerations with the Terraform CLI changes](#considerations-with-the-terraform-cli-changes)
+  * [Considerations for Linux Distribution](#considerations-for-linux-distribution)
+  * [Refactoring into Bash Scripts](#refactoring-into-bash-scripts)
+    + [Shebang Considerations](#shebang-considerations)
+    + [Execution Considerations](#execution-considerations)
+    + [Linux Permissions Considerations](#linux-permissions-considerations)
+- [Gitpod Lifecycle](#gitpod-lifecycle)
+  * [Working with Env Vars](#working-with-env-vars)
+    + [env command](#env-command)
+    + [Setting and Unsetting Env Vars](#setting-and-unsetting-env-vars)
+    + [Print Vars](#print-vars)
+    + [Scoping of Env Vars](#scoping-of-env-vars)
+    + [Persist Env Vars in Gitpod](#persist-env-vars-in-gitpod)
+  * [AWS CLI installation](#aws-cli-installation)
+  * [Working with AWS resources in Terraform](#working-with-aws-resources-in-terraform)
+    + [Naming S3 buckets with random](#naming-s3-buckets-with-random)
+- [Terraform Basics](#terraform-basics)
+  * [Terraform Registry](#terraform-registry)
+  * [Terraform Console](#terraform-console)
+    + [Terraform Init](#terraform-init)
+    + [Terraform Plan](#terraform-plan)
+    + [Terraform Apply](#terraform-apply)
+    + [Terraform Destroy](#terraform-destroy)
+  * [Terraform Lock Files](#terraform-lock-files)
+  * [Terraform State Files](#terraform-state-files)
+  * [Terraform Directory](#terraform-directory)
+- [Issue with Terraform Cloud Login and Gitpod Workspace](#issue-with-terraform-cloud-login-and-gitpod-workspace)
 
-## Semantic Versioning :mage: 
+## Semantic Versioning
 
 This project will use semantic versioning for tagging.
 [semver.org](https://semver.org/)
@@ -213,7 +213,7 @@ If successful you will see a json formatted output:
 Paramenters for the random string needed to be changed.
 [hashicorp random doc](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string)
 
-## Terraform Basics (tf)
+## Terraform Basics
 
 ### Terraform Registry
 
