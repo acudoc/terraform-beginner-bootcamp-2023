@@ -64,5 +64,22 @@ Terraform loads variables in the following order:
 -    An environment variable with the "TF_VAR_name" format.
 -    The default value in the variable definition.
 
+## Dealing with Configuration Drift
 
+## What if we Lose our State File?
 
+Most likely have to tear down all your cloud infrastructure manually.
+Terraform import will work for some, but not all resources. Check terraform provider's
+documentation to see what resources support import.
+
+### Fix Missing Resources with Terraform Import
+
+`terraform import aws_s3_bucket.bucket bucket-name`
+
+[AWS S3 Bucket Import](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket#import)
+[tf Import](https://developer.hashicorp.com/terraform/cli/import/usage)
+
+### Fix Manual Configuratoin
+
+If cloud resource is modified or deleted manually through ClickOps.
+Running terraform plan will attempt to put our infrastructure back into expected state fixing Configuration Drift
