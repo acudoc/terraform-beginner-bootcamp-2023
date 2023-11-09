@@ -115,4 +115,18 @@ module "terrahouse_aws" {
 }
 ```
 
-[](https://developer.hashicorp.com/terraform/language/modules/sources#local-paths)
+[Module Source Docs](https://developer.hashicorp.com/terraform/language/modules/sources#local-paths)
+
+## Warning about using ChatGPT to write Terraform
+
+ChatGPT was trained on older terraform documentation. Examples provided by ChatGPT were for older versions of terraform and some functions were deprecated. Its critical to check documentation of terraform and providers to fix issues.
+
+## Working with Files in tf
+
+### Path Variable
+
+In tf there is special variable called `path`, this allows local path reference:
+- `path.module` = get the path for current module
+- `path.root` = get the path for root module
+
+[Special Path Variable](https://developer.hashicorp.com/terraform/language/expressions/references#filesystem-and-workspace-info)
