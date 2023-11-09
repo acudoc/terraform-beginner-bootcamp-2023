@@ -79,7 +79,40 @@ documentation to see what resources support import.
 [AWS S3 Bucket Import](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket#import)
 [tf Import](https://developer.hashicorp.com/terraform/cli/import/usage)
 
-### Fix Manual Configuratoin
+### Fix Manual Configuration 
 
 If cloud resource is modified or deleted manually through ClickOps.
 Running terraform plan will attempt to put our infrastructure back into expected state fixing Configuration Drift
+
+## tf Modules
+
+### tf Module Structure
+
+Recommended to place modules in a `modules` directory when locally developing modules. But, name can be anything.
+
+### Passing Input Variables
+
+First pass variables into our module, then the module declares the variables in its own variables.tf
+
+```tf
+module "terrahouse_aws" {
+  source = "./modules/terrahouse_aws"
+  user_uuid = var.user_uuid
+  bucket_name = var.bucket_name
+}
+```
+
+### Modules Sources
+
+Using the source we can import the module from various places eg:
+- locally
+- Github
+- Terraform Registry
+
+```tf
+module "terrahouse_aws" {
+  source = "./modules/terrahouse_aws"
+}
+```
+
+[](https://developer.hashicorp.com/terraform/language/modules/sources#local-paths)
