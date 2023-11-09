@@ -76,8 +76,8 @@ documentation to see what resources support import.
 
 `terraform import aws_s3_bucket.bucket bucket-name`
 
-[AWS S3 Bucket Import](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket#import)
-[tf Import](https://developer.hashicorp.com/terraform/cli/import/usage)
+- [AWS S3 Bucket Import](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket#import)
+- [tf Import](https://developer.hashicorp.com/terraform/cli/import/usage)
 
 ### Fix Manual Configuration 
 
