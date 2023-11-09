@@ -45,11 +45,24 @@ For multiple variables, it is easier to specify their values in a variable defin
 
 ### terraform.tfvars
 
-This is default file to load in tf variables in blunk
+Allow us to manage variable assignments systematically in a file with the extension `.tfvars` or `.tfvars.json`
+
+[Great Article about tfvars](https://spacelift.io/blog/terraform-tfvars)
 
 ### auto.tfvars
 
+The `.auto.tfvars` get put at the end of a file name. `my-test.auto.tfvars`
+
 ### order of tf variables
+
+Terraform loads variables in the following order:
+
+-    A variable value file explicitly referenced using a "-var" flag.
+-    A ".tfvars" file explicitly referenced using a "-var-file" flag.
+-    A file with the ".auto.tfvars" extension.
+-    A file called "terraform.tfvars".
+-    An environment variable with the "TF_VAR_name" format.
+-    The default value in the variable definition.
 
 
 
