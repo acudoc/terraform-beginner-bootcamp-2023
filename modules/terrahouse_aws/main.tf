@@ -35,7 +35,6 @@ resource "aws_s3_object" "index_html" {
   bucket = aws_s3_bucket.website_bucket.bucket
   key    = "index.html"
   source = var.index_html_filepath
-
   etag = filemd5(var.index_html_filepath)
 }
 
