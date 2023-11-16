@@ -277,3 +277,21 @@ resource "aws_instance" "web" {
 }
 ```
 https://developer.hashicorp.com/terraform/language/resources/provisioners/remote-exec
+
+## For Each Expressions
+
+For each allows us to enumerate over complex data types
+
+```sh
+[for s in var.list : upper(s)]
+```
+
+This is mostly useful when you are creating multiples of a cloud resource and you want to reduce the amount of repetitive terraform code.
+
+[For Each Expressions](https://developer.hashicorp.com/terraform/language/expressions/for)
+
+### Unexpected Issue
+I was not able to get code to run following along in class.
+There was a prompt for assets_path each time I ran `tf.plan`
+
+Finally, needed to add `assets_path = var.assets_path` in root level `main.tf`
